@@ -9,10 +9,12 @@ int main(){
   map<char, int> mapa;
   //cin >> "Ingrese texto: " >> palabra;
   for (int i=0; i<palabra.size(); i++){
-    if (mapa.find(palabra[i])==mapa.end()){
-      mapa.insert (pair <char, int> (palabra[i],1));
-    }
-    else{
+    mapa.insert (pair <char, int> ('a',0));
+    mapa.insert (pair <char, int> ('i',0));
+    mapa.insert (pair <char, int> ('u',0));
+    mapa.insert (pair <char, int> ('e',0));
+    mapa.insert (pair <char, int> ('o',0));
+    if (mapa.find(palabra[i])!=mapa.end()){
       mapa.find(palabra[i])->second+=1;
     }
   }
